@@ -4,5 +4,11 @@ def word_counter(book_text):
     return word_count
 
 def character_counter(text):
-    pass
-    
+    char_dict = {}
+    for c in text:
+        char = c.lower()
+        if char in char_dict:
+            char_dict[char] += 1
+        else:
+            char_dict[char] = 1
+    return char_dict
