@@ -3,6 +3,7 @@ def word_counter(book_text):
     word_count = len(text_split)
     return word_count
 
+
 def character_counter(text):
     char_dict = {}
     for c in text:
