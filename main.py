@@ -1,12 +1,6 @@
 from stats import word_counter
 from stats import character_counter
-
-
-def get_book_text(filepath):
-    with open(filepath) as f:
-        file_contents = f.read()
-    return file_contents
-
+from stats import sorted_report
 
 def main():
     get_text = get_book_text("books/frankenstein.txt")
@@ -15,5 +9,9 @@ def main():
     character_dict = character_counter(get_text)
     print(character_dict)
 
+def get_book_text(filepath):
+    with open(filepath) as f:
+        file_contents = f.read()
+    return file_contents
 
 main()
